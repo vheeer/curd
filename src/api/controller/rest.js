@@ -159,31 +159,5 @@ module.exports = function(modelName, columns) {return {
     const result = await this.model(modelName).where({ id }).update(updateObj);
     
     return this.success(result);
-  },
-  /**
-   * getcolumn action
-   * @return {Promise} []
-   */
-  async readcolumnAction() {
-    const model = this.model(modelName);
-    const { tablePrefix } = model;
-    const result = await model.query("desc " + tablePrefix + modelName);
-    return this.success(result);
-  },
-  /**
-   * sortcolumn action
-   * @return {Promise} []
-   */
-  async changecolumnAction() {
-    const { id, column } = this.post();
-    //储存
-    const service = this.service('saveimg');
-    const { save_path, url } = service.save(this.file());
-    //入库
-    const updateObj = {};
-          updateObj[column] = url;
-    const result = await this.model(modelName).where({ id }).update(updateObj);
-    
-    return this.success(result);
   }
 }};
