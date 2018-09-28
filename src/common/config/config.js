@@ -4,9 +4,9 @@ const API_prepay = "https://api.mch.weixin.qq.com/pay/unifiedorder";
 const wxKey = "192006250b4c09247ec02edce69f6a2d";
 const myIp = "111.30.252.31";
 
-const partner_key = "dapingkejiviewdapingkejiviewdapi";
+const partner_key = "dapingkejidapingkejidapingkejida";
 let appid = "wx60cd30716bb200dd";
-let secret = "0e04535e5bb46f254b6f582490f186ff";
+let secret = "1daa19524c2a172f80e3d96eb0886891";
 let mch_id = "1494794472";
 let notify_url = "https://www.dapingkeji.club/curd/api/pay/notify";
 module.exports = {
